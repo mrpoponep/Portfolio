@@ -28,6 +28,8 @@ UI_UX=load_lottieurl("https://lottie.host/c34b9988-6f8c-4f08-8e80-82aefad977f5/s
 PROJECT=load_lottieurl("https://lottie.host/97122321-dfea-4c17-ac73-a9b123b04cea/PDn3xmrocK.json")
 
 def home():
+    with open("assets/styles/style.css") as f:
+        st.markdown("<style>{}</style>".format(f.read()), unsafe_allow_html=True)
     with st.container():
         st.markdown("""
     <style>
@@ -108,6 +110,8 @@ def home():
             st_lottie(UI_UX, height=250, key="UI_UX")
 
 def project():
+    with open("assets/styles/style.css") as f:
+        st.markdown("<style>{}</style>".format(f.read()), unsafe_allow_html=True)
     with st.container():
         st.markdown("""
     <style>
