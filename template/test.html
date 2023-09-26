@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Four Columns</title>
+    <style>
+        /* Style for the container */
+        .container {
+            display: flex;
+            justify-content: space-between;
+            padding: 20px;
+        }
+
+        /* Style for each column */
+        .column {
+            flex-basis: calc(25% - 20px);
+            background-color: lightgray;
+            padding: 20px;
+            margin-right: 20px;
+        }
+
+        /* Style for the heading */
+        .column h2 {
+            font-size: 30px;
+            margin-bottom: 10px;
+        }
+
+        /* Style for the paragraph */
+        .column p {
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+
+        /* Style for the button */
+        .column .button {
+            background-color: #0074d9;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Column 1 -->
+        <div class="column">
+            <h2>Column 1</h2>
+            <p>This is some text for Column 1.</p>
+            <a href="https://example.com" class="button">Read More</a>
+        </div>
+
+        <!-- Column 2 -->
+        <div class="column">
+            <h2>Column 2</h2>
+            <p>This is some text for Column 2. This is some text for Column 2. This is some text for Column 2. This is some text for Column 2. </p>
+            <p></p>
+            <p>&nbsp</p>
+            <a href="https://example.com" class="button">Read More</a>
+        </div>
+
+        <!-- Column 3 -->
+        <div class="column">
+            <h2>Column 3</h2>
+            <p>This is some text for Column 3.</p>
+            <a href="https://example.com" class="button">Read More</a>
+        </div>
+
+        <!-- Column 4 -->
+        <div class="column">
+            <h2>Column 4</h2>
+            <p>This is some text for Column 4.</p>
+            <a href="https://example.com" class="button">Read More</a>
+        </div>
+    </div>
+</body>
+</html>
