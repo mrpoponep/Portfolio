@@ -16,10 +16,9 @@ selected3 = option_menu(None, ["Home", "Project",  "Contact"],
 )
 
 SOCIAL_MEDIA = {
-    "YouTube": "https://youtube.com/c/codingisfun",
-    "LinkedIn": "https://linkedin.com",
-    "GitHub": "https://github.com",
-    "Twitter": "https://twitter.com",}
+    "Gmail": "mailto:someone@example.com",
+    "Facebook": "https://www.facebook.com/profile.php?id=100016522207049&locale=vi_VN",
+    "GitHub": "https://github.com/mrpoponep",}
 
 
 AI_animation = load_lottieurl("https://lottie.host/f9678317-48a0-489f-9e25-a7ae3c4f6831/5TYIeF46Jg.json")
@@ -91,7 +90,7 @@ def home():
     with st.container():
         
         left_column, right_column = st.columns(2)
-        with right_column:
+        with left_column:
             st.title("WEB AND DESKTOP APPLICATION")
             st.markdown("""
                 <style>
@@ -106,7 +105,7 @@ def home():
             st.markdown('<p class="big-font">Build and deploy simple website</p>', unsafe_allow_html=True)
             st.markdown('<p class="big-font">Design UI/UX for destop app and website</p>', unsafe_allow_html=True)
             
-        with left_column:
+        with right_column:
             st_lottie(UI_UX, height=250, key="UI_UX")
 
 def project():
@@ -144,7 +143,7 @@ def project():
     with open("template/test.html" ,'r') as f: 
             html_data = f.read()
 
-    st.components.v1.html(html_data,height=500)
+    st.components.v1.html(html_data,height=1000)
     
 
 def contact():

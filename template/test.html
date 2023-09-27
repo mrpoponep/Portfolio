@@ -1,77 +1,65 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Four Columns</title>
-    <style>
-        /* Style for the container */
-        .container {
-            display: flex;
-            justify-content: space-between;
-            padding: 20px;
-        }
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
+}
 
-        /* Style for each column */
-        .column {
-            flex-basis: calc(25% - 20px);
-            background-color: lightgray;
-            padding: 20px;
-            margin-right: 20px;
-        }
+/* Container for flexboxes */
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
 
-        /* Style for the heading */
-        .column h2 {
-            font-size: 30px;
-            margin-bottom: 10px;
-        }
+/* Create four equal columns */
+.column {
+  flex: 25%;
+  padding: 20px;
+}
 
-        /* Style for the paragraph */
-        .column p {
-            font-size: 20px;
-            margin-bottom: 10px;
-        }
+/* On screens that are 992px wide or less, go from four columns to two columns */
+@media screen and (max-width: 992px) {
+  .column {
+    flex: 50%;
+  }
+}
 
-        /* Style for the button */
-        .column .button {
-            background-color: #0074d9;
-            color: white;
-            border: none;
-            padding: 10px 20px;
-            font-size: 16px;
-            cursor: pointer;
-        }
-    </style>
+/* On screens that are 600px wide or less, make the columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .row {
+    flex-direction: column;
+  }
+}
+</style>
 </head>
 <body>
-    <div class="container">
-        <!-- Column 1 -->
-        <div class="column">
-            <h2>Column 1</h2>
-            <p>This is some text for Column 1.</p>
-            <a href="https://example.com" class="button">Read More</a>
-        </div>
 
-        <!-- Column 2 -->
-        <div class="column">
-            <h2>Column 2</h2>
-            <p>This is some text for Column 2. This is some text for Column 2. This is some text for Column 2. This is some text for Column 2. </p>
-            <p></p>
-            <p>&nbsp</p>
-            <a href="https://example.com" class="button">Read More</a>
-        </div>
+<h2>Responsive Four Column Layout with Flex</h2>
+<p><strong>Resize the browser window to see the responsive effect.</strong> On screens that are 992px wide or less, the columns will resize from four columns to two columns. On screens that are 600px wide or less, the columns will stack on top of each other instead of next to eachother.</p>
 
-        <!-- Column 3 -->
-        <div class="column">
-            <h2>Column 3</h2>
-            <p>This is some text for Column 3.</p>
-            <a href="https://example.com" class="button">Read More</a>
-        </div>
+<div class="row">
+  <div class="column" style="background-color:#aaa;">
+    <h2>Column 1</h2>
+    <p>Some text..</p>
+  </div>
+  
+  <div class="column" style="background-color:#bbb;">
+    <h2>Column 2</h2>
+    <p>Some text..</p>
+  </div>
+  
+  <div class="column" style="background-color:#ccc;">
+    <h2>Column 3</h2>
+    <p>Some text..</p>
+  </div>
+  
+  <div class="column" style="background-color:#ddd;">
+    <h2>Column 4</h2>
+    <p>Some text..</p>
+  </div>
+</div>
 
-        <!-- Column 4 -->
-        <div class="column">
-            <h2>Column 4</h2>
-            <p>This is some text for Column 4.</p>
-            <a href="https://example.com" class="button">Read More</a>
-        </div>
-    </div>
 </body>
 </html>
