@@ -2,4 +2,4 @@ streamlit_lottie
 streamlit-option-menu
 streamlit
 requests
-
+streamlit_js_eval

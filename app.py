@@ -2,6 +2,7 @@ import streamlit as st
 from streamlit_lottie import st_lottie
 from streamlit_option_menu import option_menu
 from helper import load_lottieurl
+from streamlit_js_eval import streamlit_js_eval
 st.set_page_config(page_title="Hotu portfolio", page_icon=":tada:", layout="wide",initial_sidebar_state="collapsed")
 
 selected3 = option_menu(None, ["Home", "Project",  "Contact"], 
@@ -28,6 +29,11 @@ PROJECT=load_lottieurl("https://lottie.host/97122321-dfea-4c17-ac73-a9b123b04cea
 
 html_data='<meta property="og:image" content="https://i.ibb.co/2c445wV/Picture1-dax-Dp-Tgqg-transformed-1.png">'
 st.components.v1.html(html_data,height=0)
+
+width = streamlit_js_eval(js_expressions='screen.width', key = 'SCR')
+if width <700:
+    device = "mobile"
+else: device = "PC"
 
 def home():
     with open("assets/styles/style.css") as f:
@@ -132,7 +138,6 @@ def project():
     }
     </style>
     """, unsafe_allow_html=True)
-        
 
     left_column, right_column = st.columns(2)
     with right_column:  
@@ -145,16 +150,26 @@ def project():
 
     with open("template/project.html" ,'r') as f: 
             html_data = f.read()
-
-    st.components.v1.html(html_data,height=800,)
+    if device == "PC":
+        heights = 500
+    else: heights = 1200
+    st.components.v1.html(html_data,height = heights)
     
 
 def contact():
     with open("assets/styles/style.css") as f:
         st.markdown("<style>{}</style>".format(f.read()), unsafe_allow_html=True)
-    with open("template/contact.html" ,'r') as f: 
-        html_data = f.read()
-    st.components.v1.html(html_data,height=1000)
+
+    with open("template/contact.html", "r", encoding="utf-8") as html_file:
+        html_content = html_file.read()
+
+    # Xác định chiều cao cho máy tính và điện thoại di động
+    if device == "PC":
+        heights = 500
+    else: heights = 850
+
+# Nhúng nội dung HTML vào ứng dụng Streamlit
+    st.components.v1.html(html_content, height=heights)
 
     
 if selected3=="Home":
