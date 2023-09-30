@@ -79,7 +79,7 @@ def home():
             st.markdown('<p class="big-font">Machine Learning and Reinforcement Learning Experience</p>', unsafe_allow_html=True)
             st.markdown('<p class="big-font">Familiar with fundamental supervised learning algorithm</p>', unsafe_allow_html=True)
         with right_column:
-            st_lottie(AI_animation, height=250, key="AI")
+            st_lottie(AI_animation, height=300, key="AI")
 
     st.write('\n')
     st.write('\n')
@@ -122,6 +122,8 @@ def project():
     .bigger-font {
         font-size:40px ;
         text-align: center;
+        align-items: top;
+        justify-content: top;
         padding: 0 0 0 60px
     }
     </style>
@@ -130,43 +132,26 @@ def project():
 
     left_column, right_column = st.columns(2)
     with right_column:  
-        st.markdown('##')
-        st.markdown('##')
-        st.markdown('##')
         st.markdown("<h1 style='text-align: center; color:#053B50 ;'>PROJECT</h1>", unsafe_allow_html=True)
         st.markdown('<center class="big-font">Leveraging cutting-edge technologies, I have developed and fine-tuned models which excel in reinforcement learning and computer vision. My expertise also extends to deploying these models into web and desktop applications.</center>', unsafe_allow_html=True)
     with left_column:
-        st_lottie(PROJECT, height=500, key="project")
+        st_lottie(PROJECT, height=300, key="project")
 
     st.write("---")
 
-    with open("template/test.html" ,'r') as f: 
+    with open("template/project.html" ,'r') as f: 
             html_data = f.read()
 
-    st.components.v1.html(html_data,height=1000)
+    st.components.v1.html(html_data,height=800)
     
 
 def contact():
     with open("assets/styles/style.css") as f:
         st.markdown("<style>{}</style>".format(f.read()), unsafe_allow_html=True)
-    col1, col2 = st.columns(2, gap="small")
-    with col1:
-        with open("template/ava.html" ,'r') as f: 
-            html_data = f.read()
-        st.components.v1.html(html_data,height=400)
+    with open("template/contact.html" ,'r') as f: 
+        html_data = f.read()
+    st.components.v1.html(html_data,height=1000)
 
-    with col2:
-        st.write('\n')
-        st.write('\n')
-        st.write('\n')
-        st.write('\n')
-        st.markdown("<h2 style='text-align: center; color: #053B50;'>CONTACT ME</h2>", unsafe_allow_html=True)
-        st.markdown("<p style='text-align: center;font-size:20px ; color: #053B50;'>I'm here to assist you! Feel free to reach out to me through various social media platforms, and I'll make sure to respond within 24 hours. Whether you have questions about Machine Learning, Artificial Intelligence, Development, Data Analytics, or Engineering, I'm here to provide answers and support your needs.</p>", unsafe_allow_html=True)
-
-    cols = st.columns(len(SOCIAL_MEDIA)+3)
-    for index, (platform, link) in enumerate(SOCIAL_MEDIA.items()):
-        cols[index+2].write(f"[{platform}]({link})")
- 
     
 if selected3=="Home":
     home()

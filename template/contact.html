@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Contact Me</title>
+    <style>
+        
+        body {
+            font-family: 'UTM Avo', sans-serif;
+            display: flex;
+            align-items: top;
+            justify-content: top;
+            height: 700px;
+            margin: 0;
+        }
+
+        .contact-container {
+            margin-top: 20px;
+            display: flex;
+            align-items: top;
+        }
+
+        .contact-text {
+            flex: 1;
+            align-items: top;
+            text-align: center;
+            font-size: 25px;
+            margin-right: 0px;
+            color: #053B50;
+            max-width: 1200px;
+        }
+
+        .contact-image {
+            flex: 1;
+            text-align: center;
+            align-items: center;
+        }
+
+        img {
+            max-width: 150%;
+            height: auto;
+        }
+
+        p {
+            word-wrap: break-word;
+        }
+        /* On screens that are 600px wide or less, make the columns stack on top of each other instead of next to each other */
+        @media screen and (max-width: 600px) {
+        .contact-container {
+            flex-direction: column;
+        }
+        }
+        .fa {
+        padding: 20px;
+        font-size: 30px;
+        width: 25px;
+        height: 25px;
+        text-align: center;
+        text-decoration: none;
+        border-radius: 50%;
+        margin: 20px;
+        }
+
+        .fa:hover {
+        opacity: 0.7;
+        }
+
+        .fa-facebook {
+        background: #3B5998;
+        color: white;
+        text-align: center;
+        
+        }
+
+        .fa-google {
+        background: #dd4b39;
+        color: white;
+        text-align: center;
+        
+        }
+
+        .fa-github {
+        background: black;
+        color: white;
+        
+        }
+
+        .social-icon {
+            margin: 100px 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="contact-container">
+        <div class="contact-image">
+            <img src="https://i.ibb.co/2dgww8y/ava.png" width="300"  height=auto title="Python" class="center">
+        </div class="social-icons">
+        <div class="contact-text">
+            <h1>CONTACT ME</h1>
+            <p>I'm here to assist you! Feel free to reach out to me through various social media platforms, and I'll make sure to respond within 24 hours. Whether you have questions about Machine Learning, Artificial Intelligence, Development, Data Analytics, or Engineering, I'm here to provide answers and support your needs.</p>
+            <div>  
+                <a href="#" class="fa fa-facebook"></a>
+                <a href="#" class="fa fa-google"></a>
+                <a href="#" class="fa fa-github"></a>
+            </div>  
+        </div>
+
+    </div>
+</body>
+</html>
