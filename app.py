@@ -146,6 +146,7 @@ def project():
     with right_column:  
         st.markdown("<h1 style='text-align: center; color:#053B50 ;'>PROJECT</h1>", unsafe_allow_html=True)
         st.markdown('<center class="big-font">Leveraging cutting-edge technologies, I have developed and fine-tuned models which excel in reinforcement learning and computer vision. My expertise also extends to deploying these models into web and desktop applications.</center>', unsafe_allow_html=True)
+        st.write("\n")
     with left_column:
         st_lottie(PROJECT, height=300, key="project")
 
@@ -169,7 +170,7 @@ def contact():
     # Xác định chiều cao cho máy tính và điện thoại di động
     if device == "PC":
         heights = 500
-    else: heights = 100
+    else: heights = 1000
 
 # Nhúng nội dung HTML vào ứng dụng Streamlit
     st.components.v1.html(html_content, height=heights)
