@@ -16,7 +16,7 @@ selected3 = option_menu(None, ["Home", "Project",  "Contact"],
 )
 
 SOCIAL_MEDIA = {
-    "Gmail": "mailto:someone@example.com",
+    "Gmail": "mailto:hotu0403@gmail.com",
     "Facebook": "https://www.facebook.com/profile.php?id=100016522207049&locale=vi_VN",
     "GitHub": "https://github.com/mrpoponep",}
 
@@ -25,6 +25,9 @@ AI_animation = load_lottieurl("https://lottie.host/f9678317-48a0-489f-9e25-a7ae3
 IDE_animation= load_lottieurl("https://lottie.host/b7a30c03-e7d0-433c-a4e4-8ddd22889977/oapyxzBSOl.json")
 UI_UX=load_lottieurl("https://lottie.host/c34b9988-6f8c-4f08-8e80-82aefad977f5/seYbUJU2Sk.json")
 PROJECT=load_lottieurl("https://lottie.host/97122321-dfea-4c17-ac73-a9b123b04cea/PDn3xmrocK.json")
+
+html_data='<meta property="og:image" content="https://i.ibb.co/2c445wV/Picture1-dax-Dp-Tgqg-transformed-1.png">'
+st.components.v1.html(html_data,height=0)
 
 def home():
     with open("assets/styles/style.css") as f:
@@ -41,6 +44,7 @@ def home():
         font-size:40px ;
     }
     </style>
+    
     """, unsafe_allow_html=True)
         
     st.write('\n')
