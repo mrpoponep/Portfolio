@@ -2,7 +2,7 @@ import streamlit as st
 from streamlit_lottie import st_lottie
 from streamlit_option_menu import option_menu
 from helper import load_lottieurl
-st.set_page_config(page_title="My Webpage", page_icon=":tada:", layout="wide",initial_sidebar_state="collapsed")
+st.set_page_config(page_title="Hotu portfolio", page_icon=":tada:", layout="wide",initial_sidebar_state="collapsed")
 
 selected3 = option_menu(None, ["Home", "Project",  "Contact"], 
     icons=['house', 'cloud-upload', "envelope"], 
@@ -146,7 +146,7 @@ def project():
     with open("template/project.html" ,'r') as f: 
             html_data = f.read()
 
-    st.components.v1.html(html_data,height=800)
+    st.components.v1.html(html_data,height=800,)
     
 
 def contact():
