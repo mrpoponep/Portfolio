@@ -31,9 +31,12 @@ html_data='<meta property="og:image" content="https://i.ibb.co/2c445wV/Picture1-
 st.components.v1.html(html_data,height=0)
 
 width = streamlit_js_eval(js_expressions='screen.width', key = 'SCR')
-if width <700:
-    device = "mobile"
-else: device = "PC"
+try:
+    if width <700:
+        device = "mobile"
+    else: device = "PC"
+except:
+    pass
 
 def home():
     with open("assets/styles/style.css") as f:
@@ -166,7 +169,7 @@ def contact():
     # Xác định chiều cao cho máy tính và điện thoại di động
     if device == "PC":
         heights = 500
-    else: heights = 850
+    else: heights = 100
 
 # Nhúng nội dung HTML vào ứng dụng Streamlit
     st.components.v1.html(html_content, height=heights)
